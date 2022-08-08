@@ -34,6 +34,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 * [React](https://es.reactjs.org/) - The web framework used
 * [Babel](https://babeljs.io/) - JavaScript compiler.
 * [Webpack](https://webpack.js.org/) - Module bundler
+* [Husky](https://www.npmjs.com/package/husky) - Modern native Git hooks made easy
+* [Eslint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
+* [Prettier](https://prettier.io/) - Code formatter
 
 ## Authors
 
