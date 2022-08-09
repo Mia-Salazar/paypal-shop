@@ -14,7 +14,15 @@
   padding: 5px 15px;
   border: none;
   border-radius: 10px;
+  background-color: white;
 }
+
+.Header-checkout:hover {
+  background: #468ccf;
+  color: white;
+}
+
+
 .Header-alert {
   color: #33b13a;
   font-size: 14px;
@@ -23,10 +31,6 @@
 .Header a {
   text-decoration: none;
   color: #33b1ff;
-}
-
-.Header-checkout {
-
 }
 
 .Header-title {
