@@ -8,5 +8,6 @@ body {
 }
 
 .main {
+  height: calc(100vh - 50px - 88px);
   padding: 0 24px;
 }
