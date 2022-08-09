@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/Home';
-import Checkout from './pages/Checkout';
-import Information from './pages/Information';
-import Payment from './pages/Payment';
-import Success from './pages/Success';
+import Home from './pages/Home/Home';
+import Checkout from './pages/Checkout/Checkout';
+import Information from './pages/Information/Information';
+import Payment from './pages/Payment/Payment';
+import Success from './pages/Success/Success';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout/Layout';
 
