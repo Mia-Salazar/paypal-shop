@@ -1,6 +1,6 @@
 # Shop made with Paypal
 
-A Shop made with Paypal to practice React hooks
+A Shop made with Paypal to practice React hooks following a [platzi course](https://platzi.com/clases/2118-react-hooks/)
 
 ## Available Scripts
 
