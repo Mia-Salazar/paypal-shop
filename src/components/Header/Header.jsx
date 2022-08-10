@@ -1,13 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Header.css'
 
 const Header = () => {
   return (
     <div className="Header">
-      <h1 className="Header-title">PlatziConf Merch</h1>
-      <button className="Header-checkout">
-        Salir
-      </button>
+      <h1 className="Header-title">
+        <Link to="/">Platzi Conf Merch</Link>
+      </h1>
+      <div className="Header-checkout">
+        <Link to="/checkout">
+          <i className="fas fa-shopping-basket" />
+        </Link>
+      </div>
     </div>
   );
 }
