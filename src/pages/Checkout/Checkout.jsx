@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import "./Checkout.css";
 
@@ -13,13 +14,15 @@ const Checkout = () => {
               <h3>ITEM name</h3>
               <span>$10</span>
             </div>
-            <button type="button">Eliminar</button>
+            <button type="button">Eliminar <i className="fas fa-trash-alt" title="Eliminar" /></button>
           </li>
         </ul>
       </div>
       <div className="Checkout-sidebar">
         <h3>Precio Total: $10</h3>
-        <button type="button">Continuar pedido</button>
+        <Link to="/checkout/information">
+          Continuar pedido
+        </Link>
       </div>
     </section>
   );
