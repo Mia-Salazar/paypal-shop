@@ -22,11 +22,16 @@
   color: white;
 }
 
+.Header-checkout:hover .Header-alert {
+  color: white
+}
+
 
 .Header-alert {
   color: #33b13a;
   font-size: 14px;
   margin-left: 5px;
+  font-weight: 600;
 }
 .Header a {
   text-decoration: none;
