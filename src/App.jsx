@@ -8,10 +8,14 @@ import Payment from './pages/Payment/Payment';
 import Success from './pages/Success/Success';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout/Layout';
+import AppContext from './context/AppContext';
+import useInitialState from './hooks/useInitialState';
 
 const App = () => {
+  const initialState = useInitialState();
   return (
-    <BrowserRouter>
+    <AppContext.Provider value={initialState}>
+          <BrowserRouter>
       <Layout>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -23,6 +27,8 @@ const App = () => {
         </Routes>
       </Layout>
     </BrowserRouter>
+    </AppContext.Provider>
+
   );
 }
 
