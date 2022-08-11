@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import AppContext from '../../context/AppContext';
 import "./Information.css";
@@ -7,9 +7,11 @@ import "./Information.css";
 const Information = () => {
   const { state, addToBuyer } = useContext(AppContext);
   const form = useRef(null);
+  const navigate = useNavigate()
   const { cart } = state;
 
   const handleSubmit = () => {
+    console.log('holi')
     const formData = new FormData(form.current);
     const buyer = {
       'name': formData.get('name'),
@@ -23,6 +25,7 @@ const Information = () => {
       'phone': formData.get('phone'),
     }
     addToBuyer(buyer);
+    navigate('/checkout/payment')
   }
 
   return (
@@ -48,7 +51,7 @@ const Information = () => {
           <Link to="/checkout" className="Information-back">
             Atrás
           </Link>
-          <button type="submit" onCLick={handleSubmit} className="Information-next">
+          <button type="submit" onClick={handleSubmit} className="Information-next">
             Pagar
           </button>
         </div>
