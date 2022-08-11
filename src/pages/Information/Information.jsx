@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import AppContext from '../../context/AppContext';
 import "./Information.css";
 
 const Information = () => {
+  const { state, addToBuyer } = useContext(AppContext);
+  const form = useRef(null);
+  const { cart } = state;
+
+  const handleSubmit = () => {
+    const formData = new FormData(form.current);
+    const buyer = {
+      'name': formData.get('name'),
+      'email': formData.get('email'),
+      'address': formData.get('address'),
+      'apto': formData.get('apto'),
+      'city': formData.get('city'),
+      'country': formData.get('country'),
+      'state': formData.get('state'),
+      'cp': formData.get('cp'),
+      'phone': formData.get('phone'),
+    }
+    addToBuyer(buyer);
+  }
+
   return (
     <section className="Information">
       <div className="Information-content">
@@ -11,7 +32,7 @@ const Information = () => {
           <h2>Informacion de contacto:</h2>
         </div>
         <div className="Information-form">
-          <form action="">
+          <form ref={form}>
             <input type="text" placeholder="Nombre completo" name="name" />
             <input type="email" placeholder="Correo Electronico" name="email" />
             <input type="text" placeholder="Direccion" name="address" />
@@ -27,19 +48,22 @@ const Information = () => {
           <Link to="/checkout" className="Information-back">
             Atrás
           </Link>
-          <Link to="/checkout/payment" className="Information-next">
+          <button type="submit" onCLick={handleSubmit} className="Information-next">
             Pagar
-          </Link>
+          </button>
         </div>
       </div>
       <div className="Information-sidebar">
         <h3>Pedido:</h3>
         <div className="Information-item">
           <ul>
-            <li className="Information-element">
-              <h4>ITEM Name</h4>
-              <span>10€</span>
-            </li>
+            {cart.map((item) => (
+              <li className="Information-element">
+                <h4>{item.title}</h4>
+                <span>{item.price}€</span>
+              </li>
+            ))}
+
           </ul>
         </div>
       </div>
