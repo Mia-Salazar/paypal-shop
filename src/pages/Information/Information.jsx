@@ -11,7 +11,6 @@ const Information = () => {
   const { cart } = state;
 
   const handleSubmit = () => {
-    console.log('holi')
     const formData = new FormData(form.current);
     const buyer = {
       'name': formData.get('name'),
