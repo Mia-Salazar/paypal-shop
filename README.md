@@ -37,6 +37,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 * [Husky](https://www.npmjs.com/package/husky) - Modern native Git hooks made easy
 * [Eslint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
 * [Prettier](https://prettier.io/) - Code formatter
+* [Paypal](https://www.npmjs.com/package/react-paypal-button-v2) - PayPal API
 
 ## Authors
 
