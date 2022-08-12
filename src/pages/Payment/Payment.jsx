@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PayPalButton } from 'react-paypal-button';
+import { PayPalButton } from 'react-paypal-button-v2';
 import { useNavigate } from 'react-router-dom';
 
 import AppContext from '../../context/AppContext';
@@ -10,9 +10,9 @@ const Payment = () => {
   const { state } = useContext(AppContext);
   const { cart } = state;
   const paypalOtions = {
-    clientId: 'ATN4MgsCVKSXinkSTL1YqlANTikW5fXyo5C7TkyVUG7JB0DTr1G2aabkWFF9Uz6kKo61tL48cfWpomc4',
+    clientId: 'AZZLgxAuZeecA8Tw4M8KtoqH0XoL_Ez1isZeg_LZW4rEpAz74s0hGHX4ssrivkMQJfr6fAvskXj_vFOO',
     intent: 'capture',
-    currency: 'USD'
+    currency: 'EUR'
   }
 
   const buttonStyles = {
